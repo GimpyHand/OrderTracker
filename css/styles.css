@@ -1,4 +1,4 @@
-root {
+:root {
 	--imperial-blue: #03256cff;
 	--persian-blue: #2541b2ff;
 	--ocean-deep: #1768acff;
@@ -7,7 +7,7 @@ root {
 	--black: #000000ff;
 	--grey: #808080ff;
 	--light-grey: #d3d3d3ff;
-	--dark-grey: #333333ff;
+	--dark-grey: #333333ff;	
 }
 body {
 	background-color: var(--light-grey);
@@ -19,6 +19,7 @@ ul {
 	margin: 0;
 	padding: 0;
 	background-color: var(--dark-grey);
+	display: flex;
 	display: flex;
 }
 ul li a {
