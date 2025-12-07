@@ -7,10 +7,10 @@
 	--black: #000000ff;
 	--grey: #808080ff;
 	--light-grey: #d3d3d3ff;
-	--dark-grey: #333333ff;	
+	--dark-grey: #333333ff;
 }
 body {
-	background-color: var(--light-grey);
+	background-color: var(--imperial-blue);
 }
 ul {
 	position: sticky;
