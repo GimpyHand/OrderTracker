@@ -1,0 +1,32 @@
+root {
+	--imperial-blue: #03256cff;
+	--persian-blue: #2541b2ff;
+	--ocean-deep: #1768acff;
+	--sky-surge: #06bee1ff;
+	--white: #ffffffff;
+	--black: #000000ff;
+	--grey: #808080ff;
+	--light-grey: #d3d3d3ff;
+	--dark-grey: #333333ff;
+}
+body {
+	background-color: var(--light-grey);
+}
+ul {
+	position: sticky;
+	top: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: var(--dark-grey);
+	display: flex;
+}
+ul li a {
+	display: block;
+	color: var(--white);
+	padding: 14px 16px;
+	text-decoration: none;
+}
+ul li a:hover {
+	background-color: var(--black);
+}
