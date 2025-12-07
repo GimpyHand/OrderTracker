@@ -9,25 +9,43 @@
 	--light-grey: #d3d3d3ff;
 	--dark-grey: #333333ff;
 }
+/* Lock document scrolling and ensure the app fills the viewport */
+html,
 body {
-	background-color: var(--imperial-blue);
-}
-ul {
-	position: sticky;
-	top: 0;
-	list-style-type: none;
+	height: 100%;
 	margin: 0;
-	padding: 0;
-	background-color: var(--dark-grey);
-	display: flex;
-	display: flex;
+	overflow: hidden; /* prevent document scrolling */
 }
-ul li a {
-	display: block;
-	color: var(--white);
-	padding: 14px 16px;
-	text-decoration: none;
+
+/* App root fills dynamic viewport height (mobile-safe) and is a column flex container */
+#app {
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
 }
-ul li a:hover {
-	background-color: var(--black);
+
+/* Hero area should flex and be able to shrink */
+.hero {
+	flex: 1 1 auto;
+	min-height: 0; /* allow flex children to shrink */
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Inner hero content centers and uses reasonable padding that can shrink */
+.hero-inner {
+	width: 100%;
+	max-width: 48rem; /* same as max-w-2xl */
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+/* Constrain large decorative media so it doesn't force overflow */
+.hero-media {
+	max-height: calc(100dvh - 6rem); /* leave room for header/footer */
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }
