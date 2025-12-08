@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
 			name="description"
-			content="OrderTracker, web UI for tracking orders"
+			content="Parcel Path , web UI for tracking orders"
 		/>
 		<title>Parcel Path - Order Manager</title>
 		<link rel="stylesheet" href="css/styles.css" />
 		<html class="bg-white dark:bg-gray-950 scheme-light dark:scheme-dark">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/logo.png" type="image/x-icon" />
 	</head>
 	<body>
 		<div id="app" class="bg-gray-900 h-[100dvh] flex flex-col">
@@ -23,8 +23,8 @@
 						<a href="#" class="-m-1.5 p-1.5">
 							<span class="sr-only">Parcel Path</span>
 							<img
-								src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-								alt=""
+								src="img/parcel_path_logo_white.png"
+								alt="Parcel Path logo"
 								class="h-8 w-auto"
 							/>
 						</a>
@@ -55,11 +55,7 @@
 						</button>
 					</div>
 					<div class="hidden lg:flex lg:gap-x-12">
-						<a
-							href="#"
-							class="text-sm/6 font-semibold text-white"
-							>Home</a
-						>
+						<a href="#" class="text-sm/6 font-semibold text-white">Home</a>
 						<a href="orders.html" class="text-sm/6 font-semibold text-white"
 							>Orders</a
 						>
@@ -80,18 +76,13 @@
 						id="mobile-menu"
 						class="backdrop:bg-transparent lg:hidden"
 					>
-						<div
-							tabindex="0"
-							class="fixed inset-0 focus:outline-none"
-						>
+						<div tabindex="0" class="fixed inset-0 focus:outline-none">
 							<el-dialog-panel
 								class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
 							>
 								<div class="flex items-center justify-between">
 									<a href="#" class="-m-1.5 p-1.5">
-										<span class="sr-only"
-											>Parcel Path</span
-										>
+										<span class="sr-only">Parcel Path</span>
 										<img
 											src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
 											alt=""
@@ -183,12 +174,12 @@
 							);
 						"
 						class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#03256c] to-[#1768ac] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
+						z-index="-1"
 					></div>
 				</div>
 				<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-					<div class="hidden sm:mb-8 sm:flex sm:justify-center">
+					<div class="hidden sm:mb-8 sm:flex sm:justify-center"></div>
 
-					</div>
 					<div class="text-center">
 						<h1
 							class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl"
@@ -198,39 +189,69 @@
 						<p
 							class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8"
 						>
-							Create orders fast, monitor status in real time, and
-							manage fulfillment from a single dashboard.
+							Create orders fast, monitor status in real time, and manage
+							fulfillment from a single dashboard.
 						</p>
-						<div
-							class="mt-10 flex items-center justify-center gap-x-6"
-						>
+						<div class="mt-10 flex items-center justify-center gap-x-6">
 							<a
 								href="orders.html"
 								class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
 								>Get started</a
 							>
-							<a
-								href="#"
-								class="text-sm/6 font-semibold text-white"
+							<a href="#" class="text-sm/6 font-semibold text-white"
 								>Learn more <span aria-hidden="true">→</span></a
 							>
 						</div>
 					</div>
 					<div class="bg-gray-900 py-24 sm:py-32">
-					  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-					    <h2 class="text-center text-lg/8 font-semibold text-white">Trusted by the world’s most innovative teams</h2>
-					    <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-					      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-white.svg" alt="Transistor" class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
+						<div class="mx-auto max-w-7xl px-6 lg:px-8">
+							<h2 class="text-center text-lg/8 font-semibold text-white">
+								Trusted by the world’s most innovative teams
+							</h2>
+							<div
+								class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
+							>
+								<img
+									width="158"
+									height="48"
+									src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-white.svg"
+									alt="Transistor"
+									class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+								/>
 
-					      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-white.svg" alt="Reform" class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
+								<img
+									width="158"
+									height="48"
+									src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-white.svg"
+									alt="Reform"
+									class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+								/>
 
-					      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg" alt="Tuple" class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" />
+								<img
+									width="158"
+									height="48"
+									src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg"
+									alt="Tuple"
+									class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+								/>
 
-					      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-white.svg" alt="SavvyCal" class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" />
+								<img
+									width="158"
+									height="48"
+									src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-white.svg"
+									alt="SavvyCal"
+									class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+								/>
 
-					      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-white.svg" alt="Statamic" class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" />
-					    </div>
-					  </div>
+								<img
+									width="158"
+									height="48"
+									src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-white.svg"
+									alt="Statamic"
+									class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div
@@ -259,6 +280,7 @@
 							);
 						"
 						class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#03256c] to-[#1768ac] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
+						z-index="-1"
 					></div>
 				</div>
 			</div>
@@ -268,8 +290,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 		<noscript>
-			JavaScript is required for the full functionality of this site.
-			Please enable JavaScript in your browser.
+			JavaScript is required for the full functionality of this site. Please
+			enable JavaScript in your browser.
 		</noscript>
 	</body>
 </html>
