@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -12,8 +12,8 @@
 		<html class="bg-white dark:bg-gray-950 scheme-light dark:scheme-dark">
 		<link rel="icon" href="img/logo.svg" type="image/x-icon">
 	</head>
-	<body>
-		<div id="app" class="bg-gray-900 h-[100dvh] flex flex-col">
+	<body class="overflow-hidden">
+		<div id="app" class="bg-gray-900 h-[100dvh] flex flex-col overflow-hidden">
 			<header class="absolute inset-x-0 top-0 z-50">
 				<nav
 					aria-label="Global"
@@ -155,10 +155,213 @@
 					</dialog>
 				</el-dialog>
 			</header>
+
+			<!-- Main Content Area - Two Section Grid -->
+			<main class="flex-1 flex flex-col pt-20 px-4 sm:px-6 lg:px-8 pb-4 gap-4 overflow-hidden">
+				<!-- Top Section - Overlapping Cards (1/4 height) -->
+				<section class="h-1/4 min-h-[120px] bg-gray-800/50 border border-gray-700 rounded-xl p-4 relative overflow-hidden">
+					<h2 class="text-white text-sm font-semibold mb-3">Incoming Orders</h2>
+					<div class="relative h-[calc(100%-2rem)] flex items-center justify-start pl-4">
+						<!-- Overlapping Cards Container -->
+						<div class="flex items-center">
+							<!-- Card 1 -->
+							<div class="w-32 sm:w-40 md:w-48 h-20 sm:h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg shadow-lg border border-indigo-400/30 flex flex-col justify-center px-3 sm:px-4 z-30 hover:z-50 hover:scale-105 transition-all cursor-pointer">
+								<span class="text-white text-xs font-medium">Order #1001</span>
+								<span class="text-white/70 text-xs mt-1">Processing</span>
+							</div>
+							<!-- Card 2 -->
+							<div class="w-32 sm:w-40 md:w-48 h-20 sm:h-24 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg shadow-lg border border-emerald-400/30 flex flex-col justify-center px-3 sm:px-4 -ml-16 sm:-ml-20 md:-ml-24 z-20 hover:z-50 hover:scale-105 transition-all cursor-pointer">
+								<span class="text-white text-xs font-medium">Order #1002</span>
+								<span class="text-white/70 text-xs mt-1">Shipped</span>
+							</div>
+							<!-- Card 3 -->
+							<div class="w-32 sm:w-40 md:w-48 h-20 sm:h-24 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg shadow-lg border border-amber-400/30 flex flex-col justify-center px-3 sm:px-4 -ml-16 sm:-ml-20 md:-ml-24 z-10 hover:z-50 hover:scale-105 transition-all cursor-pointer">
+								<span class="text-white text-xs font-medium">Order #1003</span>
+								<span class="text-white/70 text-xs mt-1">Pending</span>
+							</div>
+							<!-- Card 4 -->
+							<div class="w-32 sm:w-40 md:w-48 h-20 sm:h-24 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg shadow-lg border border-rose-400/30 flex flex-col justify-center px-3 sm:px-4 -ml-16 sm:-ml-20 md:-ml-24 z-0 hover:z-50 hover:scale-105 transition-all cursor-pointer">
+								<span class="text-white text-xs font-medium">Order #1004</span>
+								<span class="text-white/70 text-xs mt-1">Delivered</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Bottom Section - Scrollable Cards Grid (3/4 height) -->
+				<section class="flex-1 min-h-0 bg-gray-800/50 border border-gray-700 rounded-xl p-4 flex flex-col overflow-hidden">
+					<h2 class="text-white text-sm font-semibold mb-3 shrink-0">Processing Orders</h2>
+					<div class="flex-1 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+						<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+							<!-- Sample Order Cards -->
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2001</span>
+									<span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Delivered</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: John Doe</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 3</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2002</span>
+									<span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Shipped</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Jane Smith</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 5</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2003</span>
+									<span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Processing</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Bob Wilson</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 2</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2004</span>
+									<span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Pending</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Alice Brown</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 1</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2005</span>
+									<span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Delivered</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Charlie Davis</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 4</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2006</span>
+									<span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">Cancelled</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Eva Martinez</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 6</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2007</span>
+									<span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Shipped</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Frank Lee</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 2</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2008</span>
+									<span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Processing</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Grace Kim</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 8</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2009</span>
+									<span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Delivered</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Henry Wang</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 3</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2010</span>
+									<span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Pending</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Ivy Chen</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 7</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2011</span>
+									<span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Shipped</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Jack Thompson</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 4</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2012</span>
+									<span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Delivered</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Kate Johnson</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 2</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2013</span>
+									<span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Processing</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Leo Garcia</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 5</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2014</span>
+									<span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Pending</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Mia Rodriguez</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 1</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2015</span>
+									<span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Delivered</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Noah Williams</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 9</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2016</span>
+									<span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Shipped</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Olivia Taylor</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 3</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2017</span>
+									<span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Processing</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Peter Anderson</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 6</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2018</span>
+									<span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">Delivered</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Quinn Moore</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 4</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2019</span>
+									<span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">Cancelled</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Rachel Clark</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 2</p>
+							</div>
+							<div class="bg-gray-700/50 border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors cursor-pointer">
+								<div class="flex items-center justify-between mb-2">
+									<span class="text-white font-medium text-sm">Order #2020</span>
+									<span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Pending</span>
+								</div>
+								<p class="text-gray-400 text-xs">Customer: Sam White</p>
+								<p class="text-gray-400 text-xs mt-1">Items: 5</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
 		</div>
 
-		
-		
+
+
 		<script src="scripts/script.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
