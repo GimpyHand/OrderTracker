@@ -16,7 +16,7 @@ body {
 	overflow: hidden;
 }
 body {
-	background-image: url('img/background.png');
+	background-image: url("../img/background.png");
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
