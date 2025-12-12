@@ -1171,8 +1171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (expandProcessingBtn) {
 		expandProcessingBtn.addEventListener("click", () => {
 			if (processingExpanded) {
-				processingSection.classList.remove("flex-1");
-				processingSection.classList.add("flex-1", "min-h-0");
+				processingSection.classList.add("min-h-0");
 				incomingSection.classList.remove("hidden");
 				expandProcessingBtn.innerHTML = `
 					<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
